@@ -1,15 +1,10 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
-
+steps:   # This 'steps' keyword was missing, which caused the parser to expect a key
 - task: TerraformTaskV4@4
   inputs:
     provider: 'aws'
