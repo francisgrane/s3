@@ -5,6 +5,10 @@ pool:
   name: 'Azure'
 
 steps:   # This 'steps' keyword was missing, which caused the parser to expect a key
+
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
 - task: TerraformTaskV4@4
   inputs:
     provider: 'aws'
