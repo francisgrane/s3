@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Azure'
 
 steps:   # This 'steps' keyword was missing, which caused the parser to expect a key
 - task: TerraformTaskV4@4
